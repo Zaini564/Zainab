@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Furniture Workshop - Services</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(-45deg, #c0392b, #8e44ad, #2980b9, #27ae60);
+            background-size: 400% 400%;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            text-align: center;
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #a0522d;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #a00; 
+            color: white;
+        }
+
+        nav a.active {
+            background-color: #a00;
+            color: #fff;
+        }
+
+        .hero {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1598300054294-08c8c16265f3');
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            color: white;
+            font-size: 42px;
+            text-align: center;
+            margin-top: 100px;
+            background-color: rgba(0,0,0,0.4);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+        }
+
+        .service-card h3 {
+            color: #4A3F35;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #4A3F35;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+                margin-top: 60px;
+            }
+
+            nav a {
+                margin: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Our Services</h1>
+        <p>Crafted Solutions for Your Home</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="HomeFurniture.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="Shop.html">Shop</a>
+        <a href="Login - Copy.html">Logout</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Explore Our Premium Furniture Services</h1>
+    </div>
+
+    <!-- Services Content -->
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3082/3082383.png" alt="Custom Furniture">
+                <h3>Custom Furniture</h3>
+                <p>Tailored furniture designed specifically for your space and style preferences.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3063/3063823.png" alt="Restoration">
+                <h3>Furniture Restoration</h3>
+                <p>Bring your old furniture back to life with our expert restoration services.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3093/3093446.png" alt="Interior Consultation">
+                <h3>Interior Consultation</h3>
+                <p>Professional advice on furniture layout and selection for your home decor needs.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png" alt="Delivery">
+                <h3>Delivery & Installation</h3>
+                <p>Hassle-free delivery and setup to ensure your furniture fits perfectly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Furniture Workshop. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

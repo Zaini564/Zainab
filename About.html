@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Furniture Workshop - About</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(-45deg, #c0392b, #8e44ad, #2980b9, #27ae60);
+            background-size: 400% 400%;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            animation: gradientMove 10s ease-in-out infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            text-align: center;
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #a0522d;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #a00;
+            color: white;
+        }
+
+        nav a.active {
+            background-color: #a00;
+            color: #fff;
+        }
+
+        .hero {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1598300052744-288b35c179b0');
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            color: white;
+            font-size: 42px;
+            text-align: center;
+            margin-top:50px;
+            background-color: rgba(0,0,0,0.4);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0px auto;
+           /* padding: 0 20px; */
+        }
+        .intro
+        {
+            margin-top: 10px;
+        }
+
+        .intro, .section {
+            background-color: #fff;
+            margin-top: 10px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+         /*   margin-bottom: 30px; */
+        }
+
+        .intro img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 5px auto;
+        }
+
+        .intro h2, .section h2 {
+            color: #4A3F35;
+            text-align: center;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #4A3F35;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Furniture Workshop</h1>
+        <p>Crafting Quality Furniture with Passion</p>
+    </header>
+
+    <nav>
+        <a href="HomeFurniture.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="Shop.html">Shop</a>
+        <a href="Login - Copy.html">Logout</a>
+    </nav>
+
+    <div class="hero">
+        <h1>About Our Workshop</h1>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Who We Are</h2>
+            <img src="HOME .jpg" alt="Workshop Image">
+            <p>We are a dedicated team of artisans who take pride in handcrafting timeless furniture that elevates your living space. From concept to creation, we focus on quality, sustainability, and design that reflects your style.</p>
+        </div>
+
+        <div class="section">
+            <h2>Our Values</h2>
+            <ul>
+                <li>Exceptional Craftsmanship</li>
+                <li>Customer Satisfaction</li>
+                <li>Eco-Friendly Materials</li>
+                <li>Innovative Designs</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Our Journey</h2>
+            <p>Founded in 2010, our workshop has grown from a small team of passionate carpenters to a renowned furniture brand. Each piece we create is a testament to our journey and commitment to excellence.</p>
+        </div>
+
+        <div class="section">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>Custom Furniture Tailored to Your Needs</li>
+                <li>Durable & Long-lasting Materials</li>
+                <li>Affordable Prices Without Compromising Quality</li>
+                <li>Friendly Support Team</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Furniture Workshop. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

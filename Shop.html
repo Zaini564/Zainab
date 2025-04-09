@@ -1,0 +1,268 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Furniture Workshop - Shop Now</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(-45deg, #c0392b, #8e44ad, #2980b9, #27ae60);
+            background-size: 400% 400%;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            text-align: center;
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #a0522d;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #a00;
+            color: white;
+        }
+
+        nav a.active {
+            background-color: #a00;
+            color: white;
+        }
+
+        .hero {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1567016540547-3a3c3e90dd5d');
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            color: white;
+            font-size: 42px;
+            text-align: center;
+            margin-top: 100px;
+            background-color: rgba(0,0,0,0.4);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .sale-title {
+            text-align: center;
+            background-color: #ffe6cc;
+            color: #a0522d;
+            padding: 20px;
+            margin: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            border-top: 3px solid #a0522d;
+            border-bottom: 3px solid #a0522d;
+            animation: pulse 3s infinite;
+            border-radius: 8px;
+        }
+
+        @keyframes pulse {
+            0% { background-color: #ffe6cc; }
+            50% { background-color: #ffdab3; }
+            100% { background-color: #ffe6cc; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card .info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            color: #4A3F35;
+        }
+
+        .product-card p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .product-card button {
+            background-color: #a0522d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #843c1c;
+        }
+
+        footer {
+            background-color: #4A3F35;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+                margin-top: 60px;
+            }
+
+            .sale-title {
+                font-size: 22px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Shop Now</h1>
+        <p>Discover Handcrafted Furniture for Every Space</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="HomeFurniture.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="shop.html" class="active">Shop Now</a>
+        <a href="Login - Copy.html">Logout</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Our Bestsellers</h1>
+    </div>
+
+    <!-- SALE Title Section -->
+    <div class="sale-title">
+        Big Offer
+    </div>
+
+    <!-- Product Grid -->
+    <div class="container">
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="Chair.png" alt="Wooden Chair">
+                <div class="info">
+                    <h3>Classic Wooden Chair</h3>
+                    <p>$100</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="Sofa.png" alt="Modern Sofa">
+                <div class="info">
+                    <h3>Modern Sofa Set</h3>
+                    <p>$300</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="table.png" alt="Coffee Table">
+                <div class="info">
+                    <h3>Rustic Coffee Table</h3>
+                    <p>$140</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="dining.png" alt="Dining Table">
+                <div class="info">
+                    <h3>Elegant Dining Table</h3>
+                    <p>$600</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Furniture Workshop. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
